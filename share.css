@@ -1,0 +1,51 @@
+.share-button,.share-close{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid var(--line);border-radius:24px;background:transparent;color:var(--paper);font:inherit;font-size:12px;line-height:1.7;letter-spacing:0;white-space:nowrap;touch-action:manipulation;transition:background .2s,border-color .2s}
+.share-button:hover,.share-close:hover{background:var(--surface);border-color:#c8c8cd}
+.page-heading-tools{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.profile-back{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.v-intro{align-items:center;flex-wrap:wrap;gap:12px 20px}
+.v-intro>[data-share-page]{order:3}
+.v-intro>span:nth-of-type(2){margin-left:auto}
+.v-intro .share-button{min-height:44px;font-size:11px}
+.project-card-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:4px}
+.project-card-foot .project-role{max-width:none;text-align:left;padding:0;min-width:0}
+.project-card-foot .share-button{border:0;padding:10px 0 10px 18px;color:var(--muted);flex-shrink:0}
+.project-card-foot .share-button:hover{background:transparent;color:var(--paper)}
+.modal-head-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+#share-dialog{width:calc(100% - 40px);max-width:480px;max-height:calc(100dvh - 40px);padding:0;border:1px solid var(--line);border-radius:18px;overflow:auto;overscroll-behavior:contain}
+#share-dialog::backdrop{background:#11131866;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.share-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 22px;border-bottom:1px solid var(--line)}
+.share-head>.mono{color:var(--muted);font-size:11px;letter-spacing:1px}
+.share-close{border-color:transparent}
+.share-content{padding:28px}
+.share-content h2{font-size:24px;font-weight:500;line-height:1.5;letter-spacing:-.4px;margin:0 0 28px;overflow-wrap:anywhere}
+.share-label{display:block;color:var(--muted);font-size:12px;margin-bottom:10px}
+#share-url{display:block;width:100%;min-width:0;min-height:48px;border:1px solid var(--line);border-radius:10px;padding:12px;background:#f0f0f2;color:var(--paper);font:inherit;font-size:16px;line-height:1.5;letter-spacing:0}
+.share-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.share-actions button{flex:1;min-height:46px;padding:12px 20px;border:1px solid var(--paper);border-radius:24px;font:inherit;font-size:13px;line-height:1.6;touch-action:manipulation}
+.share-copy{background:var(--paper);color:white}
+.share-native{background:transparent;color:var(--paper)}
+.share-native[hidden]{display:none}
+.share-actions button:disabled{opacity:.55;cursor:wait}
+.share-status{min-height:42px;margin:18px 0 0;color:var(--muted);font-size:12px;line-height:1.8}
+@media screen and (max-width:767px){
+ .v-intro{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px}
+ .v-intro>span:first-of-type{grid-column:1;grid-row:1}
+ .v-intro>span:nth-of-type(2){grid-column:1;grid-row:2;margin-left:0;text-align:left;font-size:8px}
+ .v-intro>[data-share-page]{grid-column:2;grid-row:1 / 3}
+ .page-heading-tools{gap:12px}
+ .page-heading-tools>.mono,.page-heading-tools>.eyebrow{min-width:0}
+ .share-button{font-size:12px;padding:10px 16px;flex-shrink:0}
+ .profile-back{flex-wrap:wrap;padding-top:22px;padding-bottom:28px}
+ .profile-back>a{min-width:0;font-size:10px}
+ .modal-head{gap:8px}
+ .modal-head>.mono{max-width:40%;line-height:1.7}
+ .modal-head-actions{gap:4px}
+ .modal-head-actions .share-button{padding:10px 13px}
+ .project-card-foot .project-role{padding:0;font-size:12px}
+ #share-dialog{width:calc(100% - 28px);max-height:calc(100dvh - 28px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px))}
+ .share-head{padding:12px 18px}
+ .share-content{padding:24px 22px}
+ .share-content h2{font-size:22px;margin-bottom:24px}
+}
+@media print{.share-button,#share-dialog{display:none!important}}
+@media(prefers-reduced-motion:reduce){.share-button,.share-close{transition:none}}
